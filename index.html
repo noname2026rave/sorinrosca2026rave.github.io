@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ion-Mirel Gozgar | Employability Skills Log</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1a17;
+    --cream:#f4efe6;
+    --paper:#fbf8f2;
+    --accent:#b6512f;
+    --accent-soft:#e7c9bb;
+    --muted:#6b645b;
+    --line:#ddd4c5;
+    --shadow:0 10px 30px rgba(28,26,23,0.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+
+  /* nav */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(244,239,230,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;letter-spacing:.2px}
+  .brand span{color:var(--accent)}
+  .nav-links{display:flex;gap:26px}
+  .nav-links a{font-size:.86rem;font-weight:600;color:var(--muted);transition:color .2s}
+  .nav-links a:hover{color:var(--accent)}
+  @media(max-width:640px){.nav-links{display:none}}
+
+  /* hero */
+  header.hero{padding:96px 0 72px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.04;margin:18px 0 16px;letter-spacing:-.5px}
+  .hero .role{font-family:'Fraunces',serif;font-style:italic;color:var(--muted);font-size:clamp(1.1rem,2.5vw,1.5rem)}
+  .tagline{margin-top:22px;max-width:560px;font-size:1.05rem;color:var(--muted)}
+
+  /* sections */
+  section{padding:74px 0;border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px}
+  .sec-num{font-family:'Fraunces',serif;font-size:.95rem;color:var(--accent);font-weight:600}
+  .sec-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:-.3px}
+
+  .about p{max-width:680px;font-size:1.1rem;color:#3a352e}
+  .about p + p{margin-top:16px}
+
+  /* skill grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+  .card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:26px 24px;
+    box-shadow:var(--shadow);
+    transition:transform .25s ease,box-shadow .25s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(28,26,23,0.12)}
+  .card h3{font-family:'Fraunces',serif;font-size:1.22rem;font-weight:600;margin-bottom:10px}
+  .card .def{font-size:.95rem;color:var(--muted);margin-bottom:14px}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:999px;margin-bottom:8px}
+  .ev{font-size:.92rem;margin-bottom:10px}
+  .ev b{font-weight:700}
+  .out{font-size:.92rem;color:#3a352e;border-top:1px dashed var(--line);padding-top:10px}
+  .out b{font-weight:700;color:var(--accent)}
+
+  /* reflection */
+  .reflection{background:var(--paper)}
+  .reflect-box{
+    max-width:780px;
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-left:4px solid var(--accent);
+    border-radius:14px;
+    padding:34px 36px;
+    box-shadow:var(--shadow);
+  }
+  .reflect-box p{font-size:1.08rem;color:#2c2823}
+  .model{font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  .wc{margin-top:18px;font-size:.82rem;color:var(--muted)}
+
+  footer{padding:50px 0 60px;text-align:center;color:var(--muted)}
+  footer .name{font-family:'Fraunces',serif;color:var(--ink);font-size:1.1rem}
+  footer a{color:var(--accent);font-weight:600}
+  footer .yr{margin-top:8px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <div class="brand">Ion-Mirel <span>Gozgar</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills Log</a>
+      <a href="#reflection">Reflection</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Employability Skills Log</div>
+    <h1>Ion-Mirel Gozgar</h1>
+    <div class="role">Business Management Student &middot; Critical and Creative Thinking</div>
+    <p class="tagline">A record of the core employability skills I developed throughout the module, with evidence drawn from workshops, group work, and independent study.</p>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
+    <p>I am a Business Management student building a career in human resource management. My studies cover marketing, organisational behaviour, strategy, and creative thinking.</p>
+    <p>The Critical and Creative Thinking module pushed me to test ideas, question assumptions, and work with others under deadline pressure. This page logs the skills I gained and the evidence behind each one.</p>
+    <p>My goal is a graduate role in HR, where clear thinking, communication, and problem solving matter every day.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Core Employability Skills</h2></div>
+    <div class="grid">
+
+      <div class="card">
+        <span class="tag">Critical thinking</span>
+        <h3>Critical Thinking</h3>
+        <p class="def">Questioning assumptions and weighing evidence before reaching a view.</p>
+        <p class="ev"><b>Evidence:</b> Challenged set arguments during workshop debates and tested each claim against module sources.</p>
+        <p class="out"><b>Outcome:</b> Reached clearer, better-supported conclusions in assessed tasks.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Creativity</span>
+        <h3>Creativity &amp; Idea Generation</h3>
+        <p class="def">Producing original ideas and exploring more than one solution.</p>
+        <p class="ev"><b>Evidence:</b> Led idea generation sessions and mapped several options before selecting a final concept.</p>
+        <p class="out"><b>Outcome:</b> Built a wider set of solutions instead of settling on the first answer.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Problem solving</span>
+        <h3>Problem Solving</h3>
+        <p class="def">Breaking complex tasks into steps and acting on them.</p>
+        <p class="ev"><b>Evidence:</b> Split a large group task into smaller stages and tracked each to completion.</p>
+        <p class="out"><b>Outcome:</b> Met deadlines and reduced last-minute pressure.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Communication</span>
+        <h3>Communication</h3>
+        <p class="def">Presenting ideas clearly in speech and writing.</p>
+        <p class="ev"><b>Evidence:</b> Presented group findings and gave structured feedback to peers.</p>
+        <p class="out"><b>Outcome:</b> Grew more confident speaking to a group.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Teamwork</span>
+        <h3>Teamwork</h3>
+        <p class="def">Listening, sharing roles, and supporting a shared goal.</p>
+        <p class="ev"><b>Evidence:</b> Coordinated roles within a multilingual study group and resolved task conflicts.</p>
+        <p class="out"><b>Outcome:</b> Delivered group work on time with a fair workload split.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Time management</span>
+        <h3>Time Management</h3>
+        <p class="def">Planning early and protecting deadlines.</p>
+        <p class="ev"><b>Evidence:</b> Built a weekly plan that mapped tasks against submission dates.</p>
+        <p class="out"><b>Outcome:</b> Submitted every component within the set window.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Digital literacy</span>
+        <h3>Digital Literacy</h3>
+        <p class="def">Using digital tools for research, writing, and presentation.</p>
+        <p class="ev"><b>Evidence:</b> Built this portfolio webpage and used digital sources for research.</p>
+        <p class="out"><b>Outcome:</b> Produced and published professional digital work.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="reflection" class="reflection">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Reflective Summary</h2></div>
+    <div class="reflect-box">
+      <div class="model">Gibbs' Reflective Cycle</div>
+      <p>Using Gibbs' reflective cycle, I review the employability skills I built during the Critical and Creative Thinking module. I joined workshops, idea generation tasks, and group discussions. At first I felt unsure about sharing ideas and challenging set views. The sessions went well once I prepared and listened to my peers. My critical thinking and creativity grew through practice and feedback. Analysing my progress, I see real gains in problem solving, communication, time management, and digital research. I learned to question assumptions before reaching conclusions. Setbacks taught me to test more options rather than rush a single answer. I also became more confident presenting ideas to a group. Looking back, the module sharpened skills employers value and showed gaps I still need to close. My action plan is to practise structured problem solving, build a stronger online portfolio, and seek work experience in human resources to keep developing further overall.</p>
+      <p class="wc">Word count: 150 (Gibbs, 1988).</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="name">Ion-Mirel Gozgar</div>
+    <p>Business Management &middot; Critical and Creative Thinking</p>
+    <p style="margin-top:6px"><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p class="yr">&copy; <span id="year"></span> Ion-Mirel Gozgar</p>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
